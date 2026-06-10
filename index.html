@@ -1,0 +1,172 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сервер CookieOmonio — Релиз и описание</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #4b0082, #000080);
+      color: #dcd6f7;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 900px;
+      background: rgba(30, 30, 50, 0.75);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      padding: 40px 50px;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.3s;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h1, h2 {
+      color: #b497e7;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    h1 {
+      font-size: 2.8rem;
+      border-bottom: 3px solid #b497e7;
+      padding-bottom: 12px;
+      animation-delay: 0.5s;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+    }
+    h2:nth-of-type(2) { animation-delay: 0.7s; }
+    h2:nth-of-type(3) { animation-delay: 0.9s; }
+    h2:nth-of-type(4) { animation-delay: 1.1s; }
+
+    .highlight {
+      color: #d4bcff;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 0;
+      opacity: 0;
+      transform: translateX(-20px);
+      animation: fadeInRight 0.8s forwards;
+      color: #c0b3e5;
+    }
+    ul:nth-of-type(1) { animation-delay: 1.3s; }
+    ul:nth-of-type(2) { animation-delay: 1.5s; }
+    ul:nth-of-type(3) { animation-delay: 1.7s; }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    code {
+      background-color: rgba(213, 198, 255, 0.15);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 600;
+      color: #d4bcff;
+      user-select: all;
+    }
+    p {
+      font-size: 1.15rem;
+      margin-top: 0;
+      opacity: 0;
+      transform: translateX(20px);
+      animation: fadeInLeft 0.8s forwards;
+      color: #ccc9f9;
+    }
+    p:nth-of-type(1) { animation-delay: 1.9s; }
+    p:nth-of-type(2) { animation-delay: 2.1s; }
+    p:nth-of-type(3) { animation-delay: 2.3s; }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #a99dfd;
+      border-top: 1px solid rgba(212, 188, 255, 0.3);
+      padding-top: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInRight {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Привет! Ты попал на релиз <span class="highlight">CookieOmonio</span></h1>
+    <p>Что тут такого интересного и почему стоит играть</p>
+
+    <h2>ТОПОВАЯ сборка от:</h2>
+    <ul>
+      <li>Ортимка (код)</li>
+      <li>Ринаткой (супер крутой пацантре + тестер)</li>
+    </ul>
+
+    <h2>Кастомные и мемные функции сборки:</h2>
+    <ul>
+      <li>Своя система RTP — рандомная телепортация по команде <code>/rtp</code></li>
+      <li>Кастомные границы мира 3К × 3К блоков</li>
+      <li>Отличная оптимизация и защита — собственный плагин, благодаря которому даже на Aternos не лагает</li>
+      <li>Надёжная система логина — никто не сможет зайти на ваш аккаунт</li>
+      <li>Моды для модерации — запрет багов, дюпов и других злоупотреблений</li>
+      <li>Система home: <code>/sethome</code> и <code>/home</code> для быстрого возвращения домой</li>
+      <li>TPA — телепортация к другому игроку по согласию с помощью <code>/tpa &lt;ник&gt;</code></li>
+      <li>Команда <code>/spawn</code> и красивый безопасный спавн при входе</li>
+      <li>Поддержка разных версий — заходите с любой версии с ресурс-паком BareBones</li>
+      <li>Поддержка Voice Chat с 3 режимами: только с тимейтом, через всю карту или реалистично (слышно всех поблизости)</li>
+      <li>Trade система с удобным GUI — лёгкий и быстрый обмен предметами</li>
+    </ul>
+
+    <h2>О сервере и комьюнити:</h2>
+    <ul>
+      <li>Можно предлагать свои идеи для добавления в игру</li>
+      <li>Дружное комьюнити (на данный момент 6 человек)</li>
+      <li>Активный администратор Ортимка — около 50 часов работы для развития сервера</li>
+    </ul>
+
+    <h2>Геймплей и ивенты:</h2>
+    <p>Весёлый игровой процесс с кастомным ивентом «Битвы кланов», где игроки сражаются в уникальных режимах за классные призы.</p>
+    <p>Можно играть вместе с другом в клане и получать удовольствие от игры.</p>
+
+    <p>Удачи и приятной игры на сервере <span class="highlight">CookieOmonio</span></p>
+
+    <footer>
+      <p>© 2026 CookieOmonio. Все права защищены.</p>
+    </footer>
+  </div>
+</body>
+</html>
